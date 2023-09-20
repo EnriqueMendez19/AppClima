@@ -1,0 +1,13 @@
+<p>{{title}}</p>
+
+<ul>
+    <li *ngFor="let item of menu" (click)="changeListName(item)">
+        <a> {{ item }} </a>
+    </li>
+    
+</ul>
+<input type="number" [(ngModel)]="firstNumber" />
+<input type="number" [(ngModel)]="secondNumber"/>
+<input type="button" value="Guardar" (click)="calculateSum()"/>
+<br>
+<span>{{ total }}</span>
