@@ -1,13 +1,37 @@
-<p>{{title}}</p>
+<p>{{ title | capitalleter}}</p>
 
 <ul>
-    <li *ngFor="let item of menu" (click)="changeListName(item)">
-        <a> {{ item }} </a>
-    </li>
-    
+  <li *ngFor="let item of menu" (click)="changeListName(item)">
+    <a> {{ item }} </a>
+  </li>
 </ul>
+<h3>Suma</h3>
 <input type="number" [(ngModel)]="firstNumber" />
-<input type="number" [(ngModel)]="secondNumber"/>
-<input type="button" value="Guardar" (click)="calculateSum()"/>
-<br>
+<input type="number" [(ngModel)]="secondNumber" />
+<input type="button" value="Guardar" (click)="calculateSum()" />
+<br />
 <span>{{ total }}</span>
+<br />
+<h3>Multiplicación</h3>
+<input type="number" [(ngModel)]="numberOne" />
+<input type="number" [(ngModel)]="numbreTwo" />
+<input type="button" value="Calcular" (click)="calculateMul()" />
+<br />
+<span>{{ totalone }}</span>
+
+<div>
+  <h3>Calcular años</h3>
+  <input class="outline" type="number" [(ngModel)]="age" />
+  <input type="button" value="Calcular" (click)="calculateAge()" />
+  <p *ngIf="calcAge > 18; else noMayor">Eres mayor de edad!</p>
+  <ng-template #noMayor>
+    <p>No eres mayor</p>
+  </ng-template>
+</div>
+<br />
+<div class="tax">
+  <app-second (ivaCalculated)="receiveIVA($event)"></app-second>
+  <h2>Resultado del cálculo de IVA:</h2>
+  <p class="iva">{{ ivaResult | currency : 'MXN'}}</p>
+</div>
+<!-- Investigar los ciclos de vida en Angular -->

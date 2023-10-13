@@ -6,11 +6,21 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './components/first/first.component';
 
 import { FormsModule } from '@angular/forms';
+import { SecondComponent } from './components/second/second.component';
+import { ThirdComponent } from './components/third/third.component';
+import { CapitalleterPipe } from './pipes/capitalleter.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
+import { ValidateAccesDirective } from './directives/validate-acces.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstComponent
+    FirstComponent,
+    SecondComponent,
+    ThirdComponent,
+    CapitalleterPipe,
+    HighlightDirective,
+    ValidateAccesDirective
   ],
   imports: [
     BrowserModule,

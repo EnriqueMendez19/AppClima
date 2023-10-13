@@ -1,0 +1,18 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+input {
+    margin: 1em;
+    background-color: whitesmoke;
+}
+
+.iva {
+    margin: 1px;
+    background-color: whitesmoke;
+    max-inline-size: 4cm;
+}
+.tax {
+    margin-left: 1em;
+}
